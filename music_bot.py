@@ -7,6 +7,8 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.voice_states = True
 
+token = open("C:\\Users\\gozip\\python_projects\\discord_bots\\discord_music_bot\\token.txt","r").readline()
+
 client = discord.Client(intents=intents)
 
 voice_clients = {}
@@ -89,4 +91,4 @@ async def on_message(msg):
         await msg.channel.send(help_message)
 
 
-client.run('MTAxODYyMzIwOTk0NTQ0MDM1Ng.G4wKr8.uNUBZ8CQy3zElN_BYanadujxsvzLSsRW9fUYL0')
+client.run(token)
